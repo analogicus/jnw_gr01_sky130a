@@ -51,10 +51,8 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
+dc temp -60 120 1
 
-
-tran 1n 10u 1p
 write
 quit
 
