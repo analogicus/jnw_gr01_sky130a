@@ -20,10 +20,10 @@ Milestone 1 implies converting temperature into a current. Hopefully you can see
 
 # What
 
-| What            |        Cell/Name |
-| :-              |  :-:       |
-| Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch |
-| Layout          | design/JNW_GR01_SKY130A/JNW_GR01.mag |
+| What            |        Cell/Name                        |
+| :-              |  :-:                                    |
+| Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
+| Layout          | design/JNW_GR01_SKY130A/JNW_GR01.mag    |
 
 
 # Changelog/Plan
