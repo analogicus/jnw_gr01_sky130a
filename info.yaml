@@ -1,11 +1,11 @@
 library: JNW_GR01_SKY130A
 cell: JNW_GR01
 # Your name
-author: Elise Havmo, Emmanuel Guy, Haavard Fredwall, Ragnhild Halvorsen Larsen
+author: Elise, Emmanuel, Haavard, Ragnhild
 # Your github username
 github: analogicus
 # Something funny and descriptive
-tagline: Group one
+tagline: This is group 1
 # Your email, if you so wish
 email: 
 # Your github site, usually <github username>.github.io
