@@ -10,7 +10,8 @@ GROUP 1: Elise, Emmanuel, Håvard and Ragnhild
 
 # Why
 
-<explain why you made this module>
+Our final goal is to make a temperature sensor. This is done this spring through 4 milestones. 
+Milestone 1 implies converting temperature into a current. Hopefully you can see our circuit in the "schematic" on our page.
 
 # How
 
