@@ -15,7 +15,7 @@ Milestone 1 implies converting temperature into a current. Hopefully you can see
 
 # How
 
-<explain short how you made this module>
+Explaining short how we made this module. Pretending that there is more text here.
 
 
 # What
