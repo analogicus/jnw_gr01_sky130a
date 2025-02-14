@@ -6,7 +6,7 @@
 [![SIM](../../actions/workflows/sim.yaml/badge.svg)](../../actions/workflows/sim.yaml)
 
 # Who
-wulff plisfunkb
+GROUP 1: Elise, Emmanuel, Håvard and Ragnhild
 
 # Why
 
