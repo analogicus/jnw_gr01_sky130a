@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/aop_v4_lpe.spi
+.include ../../../work/lpe/test_aop_lpe.spi
 #else
-.include ../../../work/xsch/aop_v4.spice
+.include ../../../work/xsch/test_aop.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -24,13 +24,14 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS   dc  {AVDD}
+VDD  VDD  VSS   dc {AVDD}
+
+VIN+ IN+ VIN_OFFSET+ dc 0 sin ( 0 100m 1Meg 0 0 0)
+VOFFp VIN_OFFSET+ VSS dc  0
 
 
-VIN+ IN+ VIN_OFFSET+ dc 0 sin (0 10m 1Meg 0 0 0)
-VIN- IN- VIN_OFFSET- dc 0 sin (0 10m 1Meg 0 0 180)
-VOFFP VIN_OFFSET+ VSS dc  0.81
-V0FFp VIN_OFFSET- VSS dc 0.81
+
+
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -40,7 +41,7 @@ V0FFp VIN_OFFSET- VSS dc 0.81
 * PROBE
 *----------------------------------------------------------------
 .save all
-.save @r.xdut.R1[i]
+.save  @r.xdut.R1[i]
 
 *----------------------------------------------------------------
 * NGSPICE control

@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/aop_v4_lpe.spi
+.include ../../../work/lpe/JNW_EX_lpe.spi
 #else
-.include ../../../work/xsch/aop_v4.spice
+.include ../../../work/xsch/JNW_EX.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -24,13 +24,8 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS   dc  {AVDD}
+VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 
-
-VIN+ IN+ VIN_OFFSET+ dc 0 sin (0 10m 1Meg 0 0 0)
-VIN- IN- VIN_OFFSET- dc 0 sin (0 10m 1Meg 0 0 180)
-VOFFP VIN_OFFSET+ VSS dc  0.81
-V0FFp VIN_OFFSET- VSS dc 0.81
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -40,7 +35,7 @@ V0FFp VIN_OFFSET- VSS dc 0.81
 * PROBE
 *----------------------------------------------------------------
 .save all
-.save @r.xdut.R1[i]
+
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -54,7 +49,7 @@ unset askquit
 optran 0 0 0 1n 1u 0
 
 
-tran 1n 10u 1p
+tran 1n 10n 1p
 write
 quit
 

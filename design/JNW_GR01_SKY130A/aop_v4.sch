@@ -14,8 +14,8 @@ N 50 140 50 170 {lab=VSS}
 N -170 140 -120 140 {lab=VSS}
 N -170 140 -170 170 {lab=VSS}
 N -170 170 -120 170 {lab=VSS}
-N 70 -100 70 -50 {lab=out}
-N 70 -50 70 -40 {lab=out}
+N 70 -100 70 -50 {lab=OUT}
+N 70 -50 70 -40 {lab=OUT}
 N -60 -100 -60 -40 {lab=#net3}
 N -20 -130 30 -130 {lab=#net3}
 N -60 -160 70 -160 {lab=VDD}
@@ -40,12 +40,12 @@ N -120 -40 -120 110 {lab=#net2}
 N -120 -160 -120 -100 {lab=VDD}
 N -70 90 -70 140 {lab=#net2}
 N -120 90 -70 90 {lab=#net2}
-N 70 -70 120 -70 {lab=out}
-N -150 -10 -100 -10 {lab=in1}
-N 110 -10 180 -10 {lab=in2}
-N 120 -70 180 -70 {lab=out}
-N 180 -70 210 -70 {lab=out}
-N 180 -10 200 -10 {lab=in2}
+N 70 -70 120 -70 {lab=OUT}
+N -150 -10 -100 -10 {lab=IN+}
+N 120 -70 180 -70 {lab=OUT}
+N 180 -70 210 -70 {lab=OUT}
+N 110 -10 150 -10 {lab=IN+}
+N 150 -10 170 -10 {lab=IN+}
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -100 -10 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -40 140 0 0 {name=x2 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 110 -10 0 1 {name=x3 }
@@ -57,8 +57,8 @@ value=100k
 footprint=1206
 device=resistor
 m=1}
-C {devices/opin.sym} 210 -70 0 0 {name=p1 lab=out}
-C {devices/ipin.sym} -150 -10 0 0 {name=p2 lab=in1}
+C {devices/opin.sym} 210 -70 0 0 {name=p1 lab=OUT}
+C {devices/ipin.sym} -150 -10 0 0 {name=p2 lab=IN+}
 C {devices/ipin.sym} -240 20 0 0 {name=p4 lab=VSS}
 C {devices/ipin.sym} -240 -40 0 0 {name=p5 lab=VDD}
-C {devices/ipin.sym} 200 -10 0 1 {name=p3 lab=in2}
+C {devices/ipin.sym} 170 -10 0 1 {name=p3 lab=IN-}
