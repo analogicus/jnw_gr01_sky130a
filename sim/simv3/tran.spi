@@ -48,7 +48,7 @@ unset askquit
 
 optran 0 0 0 1n 10u 0
 
-dc temp -40 120 1
+dc temp -40 120 10
 
 * tran 1n 10n 1p
 write
