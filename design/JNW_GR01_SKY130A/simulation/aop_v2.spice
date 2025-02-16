@@ -1,0 +1,48 @@
+** sch_path: /home/manu/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/aop_v2.sch
+**.subckt aop_v2 IN1 IN2 OUT
+*.ipin IN1
+*.ipin IN2
+*.opin OUT
+x4 net1 net2 GND GND JNWATR_NCH_4C5F0
+x1 net3 IN1 net1 GND JNWATR_NCH_4C5F0
+x2 OUT IN2 net1 GND JNWATR_NCH_4C5F0
+x3 net2 net2 GND GND JNWATR_NCH_4C5F0
+x5 OUT net3 net4 net4 JNWATR_PCH_4C5F0
+x6 net3 net3 net4 net4 JNWATR_PCH_4C5F0
+V1 net4 GND 6
+R1 net4 net2 100k m=1
+**.ends
+
+* expanding   symbol:  /home/manu/pro/aicex/ip/jnw_atr_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym # of pins=4
+** sym_path: /home/manu/pro/aicex/ip/jnw_atr_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym
+** sch_path: /home/manu/pro/aicex/ip/jnw_atr_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sch
+.subckt JNWATR_NCH_4C5F0 D G S B
+*  p0 -  iopin  IS MISSING !!!!
+*  p1 -  iopin  IS MISSING !!!!
+*  p2 -  iopin  IS MISSING !!!!
+*  p3 -  iopin  IS MISSING !!!!
+*  M1 -  nfet_01v8  IS MISSING !!!!
+*  l0 -  lab_pin  IS MISSING !!!!
+*  l1 -  lab_pin  IS MISSING !!!!
+*  l2 -  lab_pin  IS MISSING !!!!
+*  l3 -  lab_pin  IS MISSING !!!!
+.ends
+
+
+* expanding   symbol:  /home/manu/pro/aicex/ip/jnw_atr_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/manu/pro/aicex/ip/jnw_atr_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/manu/pro/aicex/ip/jnw_atr_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+.subckt JNWATR_PCH_4C5F0 D G S B
+*  p0 -  iopin  IS MISSING !!!!
+*  p1 -  iopin  IS MISSING !!!!
+*  p2 -  iopin  IS MISSING !!!!
+*  p3 -  iopin  IS MISSING !!!!
+*  M1 -  pfet_01v8  IS MISSING !!!!
+*  l0 -  lab_pin  IS MISSING !!!!
+*  l1 -  lab_pin  IS MISSING !!!!
+*  l2 -  lab_pin  IS MISSING !!!!
+*  l3 -  lab_pin  IS MISSING !!!!
+.ends
+
+.GLOBAL GND
+.end
