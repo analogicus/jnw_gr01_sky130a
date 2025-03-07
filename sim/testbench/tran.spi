@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/test_total_sys_lpe.spi
+.include ../../../work/lpe/testbench_lpe.spi
 #else
-.include ../../../work/xsch/test_total_sys.spice
+.include ../../../work/xsch/testbench.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -24,7 +24,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
+VDD  VDD  0 dc 1.8 
 
 *-----------------------------------------------------------------
 * DUT
@@ -35,6 +35,7 @@ VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 * PROBE
 *----------------------------------------------------------------
 .save all
+.save  @r.xdut.R1[i]
 
 
 *----------------------------------------------------------------
@@ -46,10 +47,12 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 100n 10u 0
+optran 0 0 0 1n 1u 0
+
+dc temp -60 120 5
 
 
-tran 10n 10u 1p
+*tran 1n 10n 1p
 write
 quit
 

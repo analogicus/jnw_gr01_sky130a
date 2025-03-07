@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/test_total_sys_lpe.spi
+.include ../../../work/lpe/aop_v6_lpe.spi
 #else
-.include ../../../work/xsch/test_total_sys.spice
+.include ../../../work/xsch/aop_v6.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -24,7 +24,11 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
+VDD  VDD  VSS  dc  {AVDD}
+
+VIN+ VP VIN_OFFSET+ dc 0 sin ( 0 10m 1Meg 0 0 0)
+VOFFp VIN_OFFSET+ VSS dc  0.8
+
 
 *-----------------------------------------------------------------
 * DUT
@@ -46,10 +50,10 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 100n 10u 0
+optran 0 0 0 1n 1u 0
 
 
-tran 10n 10u 1p
+tran 1n 10u 1p
 write
 quit
 

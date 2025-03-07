@@ -18,5 +18,5 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/lab_wire.sym} -130 90 0 0 {name=p1 sig_type=std_logic lab=0}
-C {devices/vsource.sym} 280 30 1 0 {name=V1 value=0 savecurrent=false}
+C {devices/vsource.sym} 280 30 3 1 {name=V1 value=0 savecurrent=false}
 C {devices/lab_wire.sym} 230 30 0 0 {name=p2 sig_type=std_logic lab=i_avoir}
