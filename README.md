@@ -9,9 +9,10 @@
 GROUP 1: Elise, Emmanuel, Håvard and Ragnhild
 
 # Why
+TTT4188 - Advanced Integrated Circuits (Spring 2025)
 
-Our final goal is to make a temperature sensor. This is done this spring through 4 milestones. 
-Milestone 1 implies converting temperature into a current. Hopefully you can see our circuit in the "schematic" on our page.
+Our final goal in this course is to make a temperature sensor that will work. This is done this spring at NTNU in Trondheim.
+We will start by converting temperature into a current, before we convert it into a digital value. Later on we will make a layout based on our temperature-sensor-circuit.
 
 # How
 
