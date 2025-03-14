@@ -15,9 +15,13 @@ Our final goal in this course is to make a temperature sensor that will work. Th
 We will start by converting temperature into a current, before we convert it into a digital value. Later on we will make a layout based on our temperature-sensor-circuit.
 
 # How
-
 Explaining short how we made this module. Pretending that there is more text here.
 
+# Milestone 1
+I am testwriting something here...
+
+# Milestone 2
+...and something here:D
 
 # What
 
