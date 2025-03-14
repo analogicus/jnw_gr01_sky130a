@@ -91,7 +91,6 @@ N -520 -60 -520 10 {lab=VB}
 N -520 10 -460 10 {lab=VB}
 N -80 20 10 20 {lab=#net3}
 N 10 20 60 20 {lab=#net3}
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -460 10 0 0 {name=x2 }
 C {devices/ipin.sym} -450 -290 3 1 {name=p2 lab=VDD}
 C {devices/ipin.sym} -450 170 2 1 {name=p1 lab=VSS
 }
@@ -120,3 +119,4 @@ value=10k
 footprint=1206
 device=resistor
 m=1}
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} -460 10 0 0 {name=x2 }
