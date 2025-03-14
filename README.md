@@ -39,11 +39,11 @@ Writing something here:D
 | Version | Status | Comment|
 | :---    | :---   | :---   |
 |0.0.0    | :white_check_mark: | Milestone 0 (individually) |
-|0.1.0    | :white_check_mark: | Milestone 1 - Convert from a temperature into a current |
-|0.2.0    | :x:    | Milestone 2 - Convert from a temperature into a digital value |
-|0.3.0    | :x:    | Milestone 3 - Layout |
-|0.4.0    | :x:    | Milestone 4 - Report |
-|0.5.0    | :x:    | Summer Holiday |
+|0.1.0    | :green_check_mark: | Milestone 1 - Convert from a temperature into a current |
+|0.2.0    | :x:                | Milestone 2 - Convert from a temperature into a digital value |
+|0.3.0    | :x:                | Milestone 3 - Layout |
+|0.4.0    | :x:                | Milestone 4 - Report |
+|0.5.0    | :x:                | Summer Holiday       |
 
 
 # Signal interface
