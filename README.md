@@ -17,7 +17,7 @@ We will start by converting temperature into a current, before we convert it int
 # How
 Explaining short how we made this module. Pretending that there is more text here.
 
-# Milestone 1
+## Milestone 1
 I am testwriting something here...
 
 # Milestone 2
