@@ -25,19 +25,23 @@ The circuit is designed to generate a current that increases linearly with tempe
 
 The circuit for the IPTAT consists of an operational amplifier, three NMOS transistors, resistors for the voltage-to-current conversion and a PMOS current mirror for output replication.
 
-The OTA is incorporated into the IPTAT circuit, that consists of a current mirror, two diodes and two resistors. The core of the IPTAT circuit is the voltage difference between two p-n junctions from the two diodes. This voltage difference is temperature dependent and is used to generate a current that is proportional to absolute temperature when applied across a resistor. PTAT voltage into resistor, PTAT current out of the resistor. The operational amplifier stabilizes the circuit and regulates the current flow and ensures that the transistors operate at the correct bias conditions. The IPTAT circuit has a PMOS current mirror that replicates the generated IPTAT to drive other circuit blocks.
+The OTA is integrated into the IPTAT circuit, that consists of a current mirror, two diodes and two resistors. The core of the IPTAT circuit is the voltage difference between two p-n junctions from the two diodes. This voltage difference is temperature dependent and is used to generate a current that is proportional to absolute temperature when applied across a resistor. The PTAT voltage is applied to the resistor, resulting in a PTAT current. The operational amplifier stabilizes the circuit and regulates the current flow and ensures that the transistors operate at the correct bias conditions. The IPTAT circuit has a PMOS current mirror that replicates the generated IPTAT to drive other circuit blocks.
 
 ## Milestone 2
 In this milestone we will be designing a circuit that converts the IPTAT from milestone 1 into digital output. It is important that the digital value is proportional to temperature.
 
 ### Circuit Design
-The circuit design consists of the IPTAT current source (from milestone 1), a comparator and a voltage divider. The IPTAT charges a capacitor until its voltage reaches the reference voltage, Vref, which is set to 1.2V using a voltage divider from VDD=1.8V. When the capacitor voltage reaches Vref, the comparator outputs a high signal at VDD, triggering the finite state machine. The finite state machine activates the reset transistor and discharging the capacitor. Once the capacitor is discharged, the comparator output will go low, and the switch will go into an open position and allows IPTAT to charge the capacitor again. This cycle repeats continuously and generates a digital value proportional to temperature.
+The circuit design consists of the IPTAT current source, a comparator and a voltage divider. The IPTAT charges a capacitor until its voltage reaches the reference voltage, Vref, which is set to 1.2V using a voltage divider from VDD=1.8V. When the capacitor voltage reaches Vref, the comparator outputs a high signal at VDD, triggering the finite state machine. The finite state machine activates the reset transistor and discharging the capacitor. Once the capacitor is discharged, the comparator output will go low, and the switch will go into an open position and allows IPTAT to charge the capacitor again. This cycle repeats continuously and generates a digital value proportional to temperature.
 
 
 # What
 
 | What            |        Cell/Name                        |
 | :-              |  :-:                                    |
+| Schematic - IPTAT                            | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
+| Schematic - operational amplifier for IPTAT  | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
+| Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
+| Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
 | Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
 | Layout          | design/JNW_GR01_SKY130A/JNW_GR01.mag    |
 
