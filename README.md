@@ -18,10 +18,13 @@ We will start by converting temperature into a current, before we convert it int
 Explaining short how we made this module. Pretending that there is more text here.
 
 ## Milestone 1
-I am testwriting something here...
+In this milestone we designed a proportional to absolute temperature (PTAT) circuit, that will generate a current that increases linearly with temperature. The circuit functionality is verified through Ngspice simulations.
 
-# Milestone 2
-...and something here:D
+### Circuit design
+blablabla
+
+## Milestone 2
+Writing something here:D
 
 # What
 
