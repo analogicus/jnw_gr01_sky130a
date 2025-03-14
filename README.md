@@ -40,8 +40,8 @@ The circuit design consists of the IPTAT current source, a comparator and a volt
 | :-              |  :-:                                    |
 | Schematic - IPTAT                            | design/JNW_GR01_SKY130A/Total_system.sch    |
 | Schematic - operational amplifier for IPTAT  | design/JNW_GR01_SKY130A/SKYOP.sch           |
-| Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
-| Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
+| Schematic - comparator                       | design/JNW_GR01_SKY130A/JNW_GR01.sch        |
+| Schematic - final temp sensor                | design/JNW_GR01_SKY130A/JNW_GR01.sch        |
 | Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
 | Layout          | design/JNW_GR01_SKY130A/JNW_GR01.mag    |
 
