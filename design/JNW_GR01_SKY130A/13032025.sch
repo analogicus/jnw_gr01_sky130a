@@ -19,7 +19,9 @@ N -240 470 -240 530 {lab=VSS}
 N -200 440 -180 440 {lab=VSS}
 N -180 440 -180 510 {lab=VSS}
 N 80 440 80 510 {lab=VSS}
+N -30 150 -30 220 {lab=#net1}
 N -240 220 -30 220 {lab=#net1}
+N -10 150 -10 220 {lab=#net2}
 N -10 220 140 220 {lab=#net2}
 N 10 -430 140 -430 {lab=VDD}
 N 140 -430 140 -310 {lab=VDD}
@@ -52,15 +54,9 @@ N 140 530 550 530 {lab=VSS}
 N 550 460 550 530 {lab=VSS}
 N 50 -170 70 -170 {lab=to_out}
 N 420 -180 420 -170 {lab=to_out}
-N 420 -170 510 -170 {lab=to_out}
-N 80 510 80 530 {lab=VSS}
-N -180 510 -180 530 {lab=VSS}
-N -50 -240 -50 -230 {lab=to_out}
-N -10 150 -10 160 {lab=#net1}
-N -30 210 -30 220 {lab=#net1}
-N -10 210 -10 220 {lab=#net2}
-N -30 210 -10 160 {lab=#net1}
-N -30 150 -10 210 {lab=#net2}
+N 420 -170 510 -170 {}
+N 80 510 80 530 {}
+N -180 510 -180 530 {}
 C {JNW_GR01_SKY130A/aop_v4.sym} -20 0 3 0 {name=x1}
 C {sky130_fd_pr/pnp_05v5.sym} 120 440 0 0 {name=Q2
 model=pnp_05v5_W3p40L3p40
@@ -91,4 +87,3 @@ device=resistor
 m=1}
 C {devices/lab_wire.sym} 70 -170 0 1 {name=p6 sig_type=std_logic lab=to_out}
 C {devices/lab_wire.sym} 420 -180 0 1 {name=p7 sig_type=std_logic lab=to_out}
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -50 -250 0 0 {name=x4 }

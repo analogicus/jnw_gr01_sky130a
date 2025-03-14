@@ -17,18 +17,15 @@ N 100 20 140 20 {lab=OUT}
 N 140 20 170 20 {lab=OUT}
 N 140 100 300 100 {lab=0}
 N 300 80 300 100 {lab=0}
-N 230 20 290 20 {lab=#net1}
-N 290 20 300 20 {lab=#net1}
-N 100 40 120 70 {lab=xxx}
+N 230 20 290 20 {lab=OUT}
+N 290 20 300 20 {lab=OUT}
+N 170 20 230 20 {lab=OUT}
 C {devices/lab_wire.sym} -260 100 0 0 {name=p2 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} 140 20 0 0 {name=p3 sig_type=std_logic lab=OUT}
-C {devices/res.sym} 300 50 0 0 {name=R1
-value=1
-footprint=1206
-device=resistor
-m=1}
 C {devices/vsource.sym} -360 40 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/lab_wire.sym} -280 -40 0 0 {name=p1 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} 200 20 3 1 {name=V2 value=0 savecurrent=true}
-C {JNW_GR01_SKY130A/temp_cur_v2.sym} -50 30 0 0 {name=x1}
-C {devices/opin.sym} 120 70 0 0 {name=p4 lab=pr}
+C {devices/res_ac.sym} 300 50 0 0 {name=R1
+value=10k
+ac=10k
+m=1}
+C {JNW_GR01_SKY130A/F_T_I_vf.sym} -50 30 0 0 {name=x1}
