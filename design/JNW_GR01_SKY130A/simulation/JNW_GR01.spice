@@ -1,0 +1,71 @@
+** sch_path: /home/aehavmo/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/JNW_GR01.sch
+**.subckt JNW_GR01 VDD_1V8 VSS PWRUP_1V8
+*.ipin VDD_1V8
+*.ipin VSS
+*.ipin PWRUP_1V8
+R1 net5 net6 1k m=1
+x2 VDD_1V8 net4 net3 net5 VSS JNWBIAS_OTA
+x1 VDD_1V8 net1 net2 VDD_1V8 VSS JNWBIAS_OTA
+R2 net1 VSS 1k m=1
+x3 net1 net2 VDD_1V8 net2 JNWATR_PCH_4C5F0
+x4 net3 net2 VDD_1V8 net9 JNWATR_PCH_4C5F0
+x5 net10 net11 net5 net12 JNWATR_NCH_4C5F0
+x6 net3 net3 net4 net13 JNWATR_NCH_4C5F0
+x7 VDD_1V8 net8 net7 net5 net6 JNWBIAS_OTA
+R3 net8 net6 1k m=1
+x8 net8 net7 VDD_1V8 net7 JNWATR_PCH_4C5F0
+x9 VSS net7 VDD_1V8 net14 JNWATR_PCH_4C5F0
+x10 net4 net4 VSS net15 JNWATR_NCH_4C5F0
+x11<0> net16<3> net17<3> VSS net18<3> JNWATR_NCH_4C5F0
+x11<1> net16<2> net17<2> VSS net18<2> JNWATR_NCH_4C5F0
+x11<2> net16<1> net17<1> VSS net18<1> JNWATR_NCH_4C5F0
+x11<3> net16<0> net17<0> VSS net18<0> JNWATR_NCH_4C5F0
+**** begin user architecture code
+Current generator
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  JNW_BIAS_SKY130A/JNWBIAS_OTA.sym # of pins=5
+** sym_path: /home/aehavmo/aicex/ip/jnw_gr01_sky130a/design/JNW_BIAS_SKY130A/JNWBIAS_OTA.sym
+** sch_path: /home/aehavmo/aicex/ip/jnw_gr01_sky130a/design/JNW_BIAS_SKY130A/JNWBIAS_OTA.sch
+.subckt JNWBIAS_OTA VDD_1V8 VIP VO VIN VSS
+*.opin VO
+*.ipin VIP
+*.ipin VIN
+*.ipin VDD_1V8
+*.ipin VSS
+**** begin user architecture code
+
+XOTA VIP VIN VO_INT VDD_1V8 VSS cpdk_ideal_ota GAIN=1000 UGBW=1e7
+
+**** end user architecture code
+R1 VO VO_INT 1k m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/aehavmo/aicex/ip/jnw_gr01_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/aehavmo/aicex/ip/jnw_gr01_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+.subckt JNWATR_PCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym # of pins=4
+** sym_path: /home/aehavmo/aicex/ip/jnw_gr01_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym
+** sch_path: /home/aehavmo/aicex/ip/jnw_gr01_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sch
+.subckt JNWATR_NCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end
