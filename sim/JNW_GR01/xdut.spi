@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut JNW_GR01
-XDUT VDD_1V8 VSS PWRUP_1V8  JNW_GR01
+XDUT VDD_1V8 VSS reset cmp  JNW_GR01

@@ -86,7 +86,7 @@ C {devices/ipin.sym} -540 390 2 1 {name=p12 lab=VIN-}
 C {devices/ipin.sym} -260 390 0 1 {name=p13 lab=VIN+}
 C {devices/capa.sym} -60 460 3 0 {name=C2
 m=1
-value=1.734
+value=5f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/ipin.sym} 60 390 0 1 {name=p14 lab=VOUT
