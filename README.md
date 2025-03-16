@@ -39,7 +39,7 @@ The Verilog code is stored in aicex/ip/jnw_gr01_sky130a/rtl/FSM.v. It is then tr
 
 
 ### Issues
-We simulated one rise of the comparator, and it works, but the system does not reset because the state machine does not give the reset signal. The Verilog code looks good, so it is more the connection of the files together. This is something we need to 
+We simulated one rise of the comparator, and it works, but the system does not reset because the state machine does not give the reset signal. The Verilog code looks good, so it is more the connection of the files together. This is something we need to fix ASAP.
 
 
 
@@ -61,7 +61,7 @@ We simulated one rise of the comparator, and it works, but the system does not r
 | :---    | :---   | :---   |
 |0.0.0    | :white_check_mark: | Milestone 0 (individually) |
 |0.1.0    | :white_check_mark: | Milestone 1 - Convert from a temperature into a current |
-|0.2.0    | :x:                | Milestone 2 - Convert from a temperature into a digital value |
+|0.2.0    | :white_check_mark: | Milestone 2 - Convert from a temperature into a digital value -> almost there |
 |0.2.1    | :white_check_mark: | Milestone 2 - Write documentation |
 |0.3.0    | :x:                | Milestone 3 - Layout |
 |0.4.0    | :x:                | Milestone 4 - Report |
