@@ -48,9 +48,8 @@ We simulated one rise of the comparator, and it works, but the system does not r
 | What            |        Cell/Name                        |
 | :-              |  :-:                                    |
 | Schematic - IPTAT                            | design/JNW_GR01_SKY130A/temo_effected_current.sch    |
-| Schematic - operational amplifier for IPTAT  | design/JNW_GR01_SKY130A/SkyOp.sch           |
-| Schematic - comparator                       | design/JNW_GR01_SKY130A/Ota.sch        |
-| Schematic - temp circuit                     | design/JNW_GR01_SKY130A/Temp_current_circuit.sch        |
+| Schematic - operational amplifier for IPTAT  | design/JNW_GR01_SKY130A/SKYOP.sch           |
+| Schematic - comparator                       | design/JNW_GR01_SKY130A/OTA.sch        |
 | Schematic - final temp sensor                | design/JNW_GR01_SKY130A/JNW_GR01.sch        |
 | Verilog - final temp sensor                  | rtl/FSM.v      |
 | Layout          | design/JNW_GR01_SKY130A/JNW_GR01.mag    |
