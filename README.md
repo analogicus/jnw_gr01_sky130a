@@ -33,16 +33,26 @@ In this milestone we will be designing a circuit that converts the IPTAT from mi
 ### Circuit Design
 The circuit design consists of the IPTAT current source, a comparator and a voltage divider. The IPTAT charges a capacitor until its voltage reaches the reference voltage, Vref, which is set to 1.2V using a voltage divider from VDD=1.8V. When the capacitor voltage reaches Vref, the comparator outputs a high signal at VDD, triggering the finite state machine. The finite state machine activates the reset transistor and discharging the capacitor. Once the capacitor is discharged, the comparator output will go low, and the switch will go into an open position and allows IPTAT to charge the capacitor again. This cycle repeats continuously and generates a digital value proportional to temperature.
 
+### Verilog module
+The Verilog module dig implements a simple counter with a reset mechanism. It has a clock input clk, a comparison input cmp, and outputs reset, count, and clkCnt. The reset signal goes high (1) whenever cmp is high. The clkCnt counts clock cycles and resets to 1 when reset is activated. The count stores the value of clkCnt when reset is triggered. Both clkCnt and count are output to ensure flexibility in further processing.
+The Verilog code is stored in aicex/ip/jnw_gr01_sky130a/rtl/FSM.v. It is then translated and compiled to enable its implementation in NGSpice, resulting in the svninst.spi file. From this point, we need to import it to the testbench.
+
+
+### Issues
+We simulated one rise of the comparator, and it works, but the system does not reset because the state machine does not give the reset signal. The Verilog code looks good, so it is more the connection of the files together. This is something we need to 
+
+
 
 # What
 
 | What            |        Cell/Name                        |
 | :-              |  :-:                                    |
-| Schematic - IPTAT                            | design/JNW_GR01_SKY130A/Total_system.sch    |
-| Schematic - operational amplifier for IPTAT  | design/JNW_GR01_SKY130A/SKYOP.sch           |
-| Schematic - comparator                       | design/JNW_GR01_SKY130A/JNW_GR01.sch        |
+| Schematic - IPTAT                            | design/JNW_GR01_SKY130A/temo_effected_current.sch    |
+| Schematic - operational amplifier for IPTAT  | design/JNW_GR01_SKY130A/SkyOp.sch           |
+| Schematic - comparator                       | design/JNW_GR01_SKY130A/Ota.sch        |
+| Schematic - temp circuit                     | design/JNW_GR01_SKY130A/Temp_current_circuit.sch        |
 | Schematic - final temp sensor                | design/JNW_GR01_SKY130A/JNW_GR01.sch        |
-| Schematic       | design/JNW_GR01_SKY130A/JNW_GR01.sch    |
+| Verilog - final temp sensor                  | rtl/FSM.v      |
 | Layout          | design/JNW_GR01_SKY130A/JNW_GR01.mag    |
 
 
