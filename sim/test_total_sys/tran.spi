@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/JNW_GR01_lpe.spi
+.include ../../../work/lpe/test_total_sys_lpe.spi
 #else
-.include ../../../work/xsch/JNW_GR01.spice
+.include ../../../work/xsch/test_total_sys.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -19,32 +19,18 @@
 .param TRF = 10p
 
 .param AVDD = {vdda}
-<<<<<<< HEAD
-.param PERIOD_CLK =1u
-.param PW_CLK = PERIOD_CLK/2
-=======
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
 VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
-<<<<<<< HEAD
-VCLK clk 0 dc pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
-
-=======
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
-<<<<<<< HEAD
-.include ../svinst.spi
-=======
 
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
@@ -60,19 +46,10 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
+optran 0 0 0 100n 10u 0
 
-<<<<<<< HEAD
-dc temp -60 150 5
-
-
-
-
-tran 125n 32u
-=======
 
 tran 1n 10n 1p
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 write
 quit
 

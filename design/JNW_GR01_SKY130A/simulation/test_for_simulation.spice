@@ -1,0 +1,8 @@
+** sch_path: /home/ragnhihl/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/test_for_simulation.sch
+**.subckt test_for_simulation
+Vin Vin GND 1
+C1 Vout GND 1p m=1
+R1 Vin Vout 1k m=1
+**.ends
+.GLOBAL GND
+.end

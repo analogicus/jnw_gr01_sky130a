@@ -50,8 +50,11 @@ N -190 160 150 160 {lab=#net2}
 N -190 150 -190 160 {lab=#net2}
 N 150 160 150 170 {lab=#net2}
 N 170 150 260 150 {lab=#net2}
+<<<<<<< HEAD
 N 260 80 290 80 {lab=#net2}
 N 290 80 290 150 {lab=#net2}
+=======
+>>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 C {JNW_GR01_SKY130A/temo_effected_current.sym} -10 30 0 0 {name=x1}
 C {JNW_GR01_SKY130A/OTA.sym} 540 -180 0 0 {name=x2}
 C {devices/capa.sym} 340 60 0 0 {name=C2
