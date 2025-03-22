@@ -1,0 +1,79 @@
+*Automatic generated instance fron ../../tech/scripts/genxdut dig
+adut [clk
++ cmp
++ ]
++ [reset
++ count.8
++ count.7
++ count.6
++ count.5
++ count.4
++ count.3
++ count.2
++ count.1
++ count.0
++ clkCnt.8
++ clkCnt.7
++ clkCnt.6
++ clkCnt.5
++ clkCnt.4
++ clkCnt.3
++ clkCnt.2
++ clkCnt.1
++ clkCnt.0
++ ] null dut
+.model dut d_cosim simulation="../dig.so" delay=10p
+
+* Inputs
+Rsvi0 clk 0 1G
+Rsvi1 cmp 0 1G
+
+* Outputs
+Rsvi2 reset 0 1G
+Rsvi3 count.8 0 1G
+Rsvi4 count.7 0 1G
+Rsvi5 count.6 0 1G
+Rsvi6 count.5 0 1G
+Rsvi7 count.4 0 1G
+Rsvi8 count.3 0 1G
+Rsvi9 count.2 0 1G
+Rsvi10 count.1 0 1G
+Rsvi11 count.0 0 1G
+Rsvi12 clkCnt.8 0 1G
+Rsvi13 clkCnt.7 0 1G
+Rsvi14 clkCnt.6 0 1G
+Rsvi15 clkCnt.5 0 1G
+Rsvi16 clkCnt.4 0 1G
+Rsvi17 clkCnt.3 0 1G
+Rsvi18 clkCnt.2 0 1G
+Rsvi19 clkCnt.1 0 1G
+Rsvi20 clkCnt.0 0 1G
+
+.save v(reset)
+
+E_STATE_count dec_count 0 value={( 0 
++ + 256*v(count.8)/AVDD
++ + 128*v(count.7)/AVDD
++ + 64*v(count.6)/AVDD
++ + 32*v(count.5)/AVDD
++ + 16*v(count.4)/AVDD
++ + 8*v(count.3)/AVDD
++ + 4*v(count.2)/AVDD
++ + 2*v(count.1)/AVDD
++ + 1*v(count.0)/AVDD
++)/1000}
+.save v(dec_count)
+
+E_STATE_clkCnt dec_clkCnt 0 value={( 0 
++ + 256*v(clkCnt.8)/AVDD
++ + 128*v(clkCnt.7)/AVDD
++ + 64*v(clkCnt.6)/AVDD
++ + 32*v(clkCnt.5)/AVDD
++ + 16*v(clkCnt.4)/AVDD
++ + 8*v(clkCnt.3)/AVDD
++ + 4*v(clkCnt.2)/AVDD
++ + 2*v(clkCnt.1)/AVDD
++ + 1*v(clkCnt.0)/AVDD
++)/1000}
+.save v(dec_clkCnt)
+
