@@ -48,7 +48,7 @@ N -190 -50 -160 -50 {lab=#net5}
 N -160 -130 -160 -50 {lab=#net5}
 N -60 -50 -30 -50 {lab=#net5}
 N -60 -130 -60 -50 {lab=#net5}
-N -370 -20 -370 90 {lab=IB}
+N -370 -20 -370 90 {lab=#net6}
 N -370 -160 -370 -110 {lab=#net1}
 N -370 -110 -370 -80 {lab=#net1}
 N -370 150 -370 170 {lab=#net4}
@@ -59,27 +59,25 @@ N -300 200 -300 230 {lab=VSS}
 N -300 230 -190 230 {lab=VSS}
 N -420 -350 -420 -330 {lab=VDD}
 N -420 -350 -400 -350 {lab=VDD}
-N -60 -370 -50 -370 {lab=#net6}
 C {devices/ipin.sym} -420 -330 2 1 {name=p1 lab=VDD}
 C {devices/ipin.sym} -400 200 2 1 {name=p2 lab=VSS
 }
 C {devices/ipin.sym} -250 -50 2 1 {name=p3 lab=VIN-}
 C {devices/ipin.sym} 30 -50 0 1 {name=p4 lab=VIN+}
-C {devices/res_ac.sym} -370 120 0 0 {name=R5
+C {devices/res_ac.sym} -370 120 0 0 {name=R115
 value=10Meg
 ac=10Meg
 m=1}
-C {devices/res_ac.sym} -370 -50 0 0 {name=R6
+C {devices/res_ac.sym} -370 -50 0 0 {name=R116
 value=27k
 ac=27k
 m=1}
-C {devices/lab_wire.sym} -370 50 0 0 {name=p15 sig_type=std_logic lab=IB}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C1F2.sym} -130 -190 0 0 {name=x8 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C1F2.sym} -150 100 0 1 {name=x13 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C1F2.sym} -70 100 0 0 {name=x14 }
 C {devices/ipin.sym} 130 20 0 1 {name=p6 lab=VOUT
 }
-C {devices/res_ac.sym} -190 200 0 0 {name=R1
+C {devices/res_ac.sym} -190 200 0 0 {name=R114
 value=0
 ac=0
 m=1}

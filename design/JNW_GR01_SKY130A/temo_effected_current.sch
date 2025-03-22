@@ -38,7 +38,6 @@ N -90 160 -80 160 {lab=LEFT_SIDE}
 N -30 160 250 160 {lab=RIGHT_SIDE}
 N 580 -20 750 -20 {lab=OUT}
 N 580 -250 580 -20 {lab=OUT}
-N 580 40 580 390 {lab=#net1}
 N -80 80 -80 120 {lab=LEFT_SIDE}
 N -60 80 -60 120 {lab=RIGHT_SIDE}
 N -60 120 -30 120 {lab=RIGHT_SIDE}
@@ -51,12 +50,10 @@ N -90 70 -80 80 {lab=LEFT_SIDE}
 N -50 70 -50 110 {lab=GATE}
 N -50 110 210 110 {lab=GATE}
 N 250 -380 580 -380 {lab=#net2}
-N 390 390 580 390 {lab=#net1}
 N 210 -230 210 110 {lab=GATE}
 N -60 -230 210 -230 {lab=GATE}
 N -60 -280 -60 -230 {lab=GATE}
 N -350 390 250 390 {lab=#net1}
-N 250 390 390 390 {lab=#net1}
 N -40 390 -40 410 {lab=#net1}
 N -170 470 -40 470 {lab=VSS}
 N -350 -380 -60 -380 {lab=#net2}
@@ -74,31 +71,17 @@ C {devices/lab_wire.sym} 250 -130 0 1 {name=p6 sig_type=std_logic lab=RIGHT_SIDE
 }
 C {devices/lab_wire.sym} -350 -120 0 1 {name=p7 sig_type=std_logic lab=LEFT_SIDE
 }
-C {sky130_fd_pr/pnp_05v5.sym} -370 280 0 0 {name=Q1
-model=pnp_05v5_W3p40L3p40
-m=1
-spiceprefix=X
-}
-C {sky130_fd_pr/pnp_05v5.sym} 270 280 0 1 {name=Q2
-model=pnp_05v5_W3p40L3p40
-m=8
-spiceprefix=X
-}
-C {devices/res_ac.sym} 250 200 0 0 {name=R2
+C {devices/res_ac.sym} 250 200 0 0 {name=R108
 value=10k
 ac=10k
 m=1}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 540 -280 0 0 {name=x4[9:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 540 -280 0 0 {name=x4}
 C {devices/lab_wire.sym} 480 -280 0 0 {name=p8 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 750 -20 0 0 {name=p9 lab=OUT}
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -60 -290 0 0 {name=x8 }
 C {devices/lab_wire.sym} 250 240 0 1 {name=p10 sig_type=std_logic lab=VR}
-C {devices/res_ac.sym} 580 10 0 0 {name=R1
-value=10k
-ac=10k
-m=1}
 C {devices/lab_wire.sym} -180 90 2 1 {name=p11 sig_type=std_logic lab=VDD}
-C {devices/res.sym} -40 440 0 0 {name=R4
+C {devices/res.sym} -40 440 0 0 {name=R117
 value=0
 footprint=1206
 device=resistor
@@ -109,3 +92,13 @@ footprint=1206
 device=resistor
 m=1}
 C {JNW_GR01_SKY130A/SKYOP.sym} -70 -80 3 0 {name=x3}
+C {sky130_fd_pr/pnp_05v5.sym} -370 280 0 0 {name=Q3
+model=pnp_05v5_W3p40L3p40
+m=1
+spiceprefix=X
+}
+C {sky130_fd_pr/pnp_05v5.sym} 270 280 0 1 {name=Q1
+model=pnp_05v5_W3p40L3p40
+m=8
+spiceprefix=X
+}
