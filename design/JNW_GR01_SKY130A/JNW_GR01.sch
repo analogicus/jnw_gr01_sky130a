@@ -55,7 +55,7 @@ N 410 40 470 40 {lab=cmp}
 N -70 310 -70 370 {lab=reset}
 C {devices/capa.sym} 70 180 0 0 {name=C2
 m=1
-value=10u
+value=8000f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/res.sym} -20 -120 0 0 {name=R1
@@ -71,7 +71,7 @@ m=1}
 C {devices/ipin.sym} -70 400 2 1 {name=p3 lab=reset}
 C {devices/ipin.sym} 470 40 0 1 {name=p4 lab=cmp}
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 200 0 0 {name=x3 }
-C {JNW_GR01_SKY130A/temo_effected_current.sym} -280 150 0 0 {name=x1}
-C {JNW_GR01_SKY130A/OTA.sym} 270 -60 0 0 {name=x2}
 C {devices/ipin.sym} -120 -300 0 0 {name=p6 lab=VDD}
 C {devices/ipin.sym} -190 360 0 0 {name=p2 lab=VSS}
+C {JNW_GR01_SKY130A/OTA.sym} 270 -60 0 0 {name=x2}
+C {JNW_GR01_SKY130A/temo_effected_current.sym} -280 150 0 0 {name=x1}

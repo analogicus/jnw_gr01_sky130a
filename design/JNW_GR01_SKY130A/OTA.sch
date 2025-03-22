@@ -59,7 +59,6 @@ N -300 200 -300 230 {lab=VSS}
 N -300 230 -190 230 {lab=VSS}
 N -420 -350 -420 -330 {lab=VDD}
 N -420 -350 -400 -350 {lab=VDD}
-N -60 -370 -50 -370 {lab=#net7}
 C {devices/ipin.sym} -420 -330 2 1 {name=p1 lab=VDD}
 C {devices/ipin.sym} -400 200 2 1 {name=p2 lab=VSS
 }

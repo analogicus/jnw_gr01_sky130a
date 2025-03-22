@@ -19,5 +19,5 @@ C {devices/res_ac.sym} 180 860 0 0 {name=R1
 value=1k
 ac=1k
 m=1}
-C {JNW_GR01_SKY130A/temo_effected_current.sym} -40 770 0 0 {name=x1}
 C {devices/vsource.sym} -240 790 0 0 {name=V1 value=1.8 savecurrent=false}
+C {JNW_GR01_SKY130A/temo_effected_current.sym} -40 770 0 0 {name=x1}
