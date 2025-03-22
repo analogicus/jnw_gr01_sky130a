@@ -74,17 +74,7 @@ C {devices/lab_wire.sym} 250 -130 0 1 {name=p6 sig_type=std_logic lab=RIGHT_SIDE
 }
 C {devices/lab_wire.sym} -350 -120 0 1 {name=p7 sig_type=std_logic lab=LEFT_SIDE
 }
-C {sky130_fd_pr/pnp_05v5.sym} -370 280 0 0 {name=Q1
-model=pnp_05v5_W3p40L3p40
-m=1
-spiceprefix=X
-}
-C {sky130_fd_pr/pnp_05v5.sym} 270 280 0 1 {name=Q2
-model=pnp_05v5_W3p40L3p40
-m=8
-spiceprefix=X
-}
-C {devices/res_ac.sym} 250 200 0 0 {name=R2
+C {devices/res_ac.sym} 250 200 0 0 {name=R108
 value=10k
 ac=10k
 m=1}
@@ -98,7 +88,7 @@ value=10k
 ac=10k
 m=1}
 C {devices/lab_wire.sym} -180 90 2 1 {name=p11 sig_type=std_logic lab=VDD}
-C {devices/res.sym} -40 440 0 0 {name=R4
+C {devices/res.sym} -40 440 0 0 {name=R117
 value=0
 footprint=1206
 device=resistor
@@ -109,3 +99,13 @@ footprint=1206
 device=resistor
 m=1}
 C {JNW_GR01_SKY130A/SKYOP.sym} -70 -80 3 0 {name=x3}
+C {sky130_fd_pr/pnp_05v5.sym} -370 280 0 0 {name=Q3
+model=pnp_05v5_W3p40L3p40
+m=1
+spiceprefix=X
+}
+C {sky130_fd_pr/pnp_05v5.sym} 270 280 0 1 {name=Q1
+model=pnp_05v5_W3p40L3p40
+m=8
+spiceprefix=X
+}
