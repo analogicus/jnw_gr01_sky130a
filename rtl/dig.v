@@ -1,28 +1,29 @@
 module dig(
-  input wire clk,
-  input wire cmp,
-  output logic reset,
-  output logic [8:0] count, 
-  output logic [8:0] clkCnt 
+    input wire clk,
+    input wire cmp,
+    output logic [4:0] b,
+    output logic reset
 );
+  logic rst;
 
-
-
-   always_ff @(posedge clk or posedge cmp) begin
-    if (cmp) begin
-      reset <= 1;
-    end else begin
-      reset <= 0;
-    end
+  always_ff @(posedge clk) begin
+      if (cmp)
+         rst <= 1;
+      else
+         rst <= 0;
   end
-  
 
-   always_ff @(posedge clk) begin
-    if (reset) begin
-      count <= clkCnt;
-      clkCnt <= 1;
-    end else begin
-      clkCnt <= clkCnt + 1;
-    end
-  end 
+  always_ff @(posedge clk) begin
+      if (rst) begin
+         b <= 0;
+         reset <= 0;  // Ensure reset is actively driven
+      end else begin
+         b <= b + 1;
+         reset <= 1;
+      end
+  end
 endmodule
+
+
+
+

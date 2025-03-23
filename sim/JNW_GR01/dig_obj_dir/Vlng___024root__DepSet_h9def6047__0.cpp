@@ -15,14 +15,9 @@ void Vlng___024root___eval_triggers__act(Vlng___024root* vlSelf) {
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_triggers__act\n"); );
     // Body
-    vlSelf->__VactTriggered.set(0U, (((IData)(vlSelf->clk) 
-                                      & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__clk__0))) 
-                                     | ((IData)(vlSelf->cmp) 
-                                        & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__cmp__0)))));
-    vlSelf->__VactTriggered.set(1U, ((IData)(vlSelf->clk) 
+    vlSelf->__VactTriggered.set(0U, ((IData)(vlSelf->clk) 
                                      & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__clk__0))));
     vlSelf->__Vtrigprevexpr___TOP__clk__0 = vlSelf->clk;
-    vlSelf->__Vtrigprevexpr___TOP__cmp__0 = vlSelf->cmp;
 #ifdef VL_DEBUG
     if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {
         Vlng___024root___dump_triggers__act(vlSelf);
