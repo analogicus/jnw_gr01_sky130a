@@ -15,26 +15,15 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
     if (false && vlSelf) {}  // Prevent unused
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___nba_sequent__TOP__0\n"); );
-    // Init
-    SData/*8:0*/ __Vdly__clkCnt;
-    __Vdly__clkCnt = 0;
     // Body
-    __Vdly__clkCnt = vlSelf->clkCnt;
-    if (vlSelf->reset) {
-        vlSelf->count = vlSelf->clkCnt;
-        __Vdly__clkCnt = 1U;
+    if (vlSelf->dig__DOT__rst) {
+        vlSelf->b = 0U;
+        vlSelf->reset = 1U;
     } else {
-        __Vdly__clkCnt = (0x1ffU & ((IData)(1U) + (IData)(vlSelf->clkCnt)));
+        vlSelf->b = (0x1fU & ((IData)(1U) + (IData)(vlSelf->b)));
+        vlSelf->reset = 0U;
     }
-    vlSelf->clkCnt = __Vdly__clkCnt;
-}
-
-VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__1(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___nba_sequent__TOP__1\n"); );
-    // Body
-    vlSelf->reset = vlSelf->cmp;
+    vlSelf->dig__DOT__rst = vlSelf->cmp;
 }
 
 void Vlng___024root___eval_nba(Vlng___024root* vlSelf) {
@@ -42,11 +31,8 @@ void Vlng___024root___eval_nba(Vlng___024root* vlSelf) {
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_nba\n"); );
     // Body
-    if ((2ULL & vlSelf->__VnbaTriggered.word(0U))) {
-        Vlng___024root___nba_sequent__TOP__0(vlSelf);
-    }
     if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
-        Vlng___024root___nba_sequent__TOP__1(vlSelf);
+        Vlng___024root___nba_sequent__TOP__0(vlSelf);
     }
 }
 
@@ -57,7 +43,7 @@ bool Vlng___024root___eval_phase__act(Vlng___024root* vlSelf) {
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_phase__act\n"); );
     // Init
-    VlTriggerVec<2> __VpreTriggered;
+    VlTriggerVec<1> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
     // Body
     Vlng___024root___eval_triggers__act(vlSelf);

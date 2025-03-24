@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/JNW_GR01_lpe.spi
+.include ../../../work/lpe/SKY_OTA_lpe.spi
 #else
-.include ../../../work/xsch/JNW_GR01.spice
+.include ../../../work/xsch/SKY_OTA.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -19,53 +19,30 @@
 .param TRF = 10p
 
 .param AVDD = {vdda}
-<<<<<<< HEAD
-<<<<<<< HEAD
-.param PERIOD_CLK =1u
-.param PW_CLK = PERIOD_CLK/2
-=======
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 
-=======
-.param PERIOD_CLK = 1u
-.param PW_CLK = PERIOD_CLK/2
->>>>>>> haavard
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-<<<<<<< HEAD
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
-<<<<<<< HEAD
-VCLK clk 0 dc pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
+VDD  VDD  VSS DC 1.8
 
-=======
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 
-=======
-VDD  VDD  VSS  dc {AVDD}
-*Vreset reset 0 dc 0
-*V2 reset 0 PULSE(0 1.8 0 1n 1n 200n 1000n)
-VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
->>>>>>> haavard
+* Sinusoidal voltage source (4 MHz)
+Vsin  V_pluss  0  SIN(1 0.5 0.5MEG)  
+
+* 0V offset, 1V amplitude, 10 MHz frequency
+
+* Reference voltage of 1.2V
+Vref  V_minus  0  DC 1
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> haavard
-.include ../svinst.spi
-=======
-
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
 .save all
- 
 
 
 *----------------------------------------------------------------
@@ -78,29 +55,9 @@ set color1=black
 unset askquit
 
 optran 0 0 0 1n 1u 0
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> haavard
-dc temp -60 150 5
-*- Override the default digital output bridge.
-pre_set auto_bridge_d_out =
-     + ( ".model auto_dac dac_bridge(out_low = 0.0 out_high = 1.8)"
-     +   "auto_bridge%d [ %s ] [ %s ] auto_dac" )
 
 
-<<<<<<< HEAD
-
-
-tran 125n 32u
-=======
-
-tran 1n 10n 1p
->>>>>>> 7e963e73f5f941d6ccd7dedb768b9f22c150f068
-=======
-tran 1n 4u 1p
->>>>>>> haavard
+tran 1n 10u 1p
 write
 quit
 
