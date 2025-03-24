@@ -16,8 +16,13 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___nba_sequent__TOP__0\n"); );
     // Body
-    vlSelf->b = ((IData)(vlSelf->dig__DOT__rst) ? 0U
-                  : (0x1fU & ((IData)(1U) + (IData)(vlSelf->b))));
+    if (vlSelf->dig__DOT__rst) {
+        vlSelf->b = 0U;
+        vlSelf->reset = 1U;
+    } else {
+        vlSelf->b = (0x1fU & ((IData)(1U) + (IData)(vlSelf->b)));
+        vlSelf->reset = 0U;
+    }
     vlSelf->dig__DOT__rst = vlSelf->cmp;
 }
 

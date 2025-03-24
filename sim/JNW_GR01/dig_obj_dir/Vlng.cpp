@@ -12,6 +12,7 @@ Vlng::Vlng(VerilatedContext* _vcontextp__, const char* _vcname__)
     , clk{vlSymsp->TOP.clk}
     , cmp{vlSymsp->TOP.cmp}
     , b{vlSymsp->TOP.b}
+    , reset{vlSymsp->TOP.reset}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

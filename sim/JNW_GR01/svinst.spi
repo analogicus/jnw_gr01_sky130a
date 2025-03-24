@@ -7,6 +7,7 @@ adut [clk
 + b.2
 + b.1
 + b.0
++ reset
 + ] null dut
 .model dut d_cosim simulation="../dig.so" delay=10p
 
@@ -20,6 +21,7 @@ Rsvi3 b.3 0 1G
 Rsvi4 b.2 0 1G
 Rsvi5 b.1 0 1G
 Rsvi6 b.0 0 1G
+Rsvi7 reset 0 1G
 
 E_STATE_b dec_b 0 value={( 0 
 + + 16*v(b.4)/AVDD
@@ -29,4 +31,6 @@ E_STATE_b dec_b 0 value={( 0
 + + 1*v(b.0)/AVDD
 +)/1000}
 .save v(dec_b)
+
+.save v(reset)
 

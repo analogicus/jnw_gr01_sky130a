@@ -66,7 +66,7 @@ value=40k
 footprint=1206
 device=resistor
 m=1}
-C {devices/ipin.sym} -70 400 2 1 {name=p3 lab=vreset}
+C {devices/ipin.sym} -70 400 2 1 {name=p3 lab=reset}
 C {devices/ipin.sym} 470 40 0 1 {name=p4 lab=cmp}
 C {devices/ipin.sym} -150 -300 0 0 {name=p6 lab=VDD}
 C {devices/ipin.sym} -170 340 0 0 {name=p2 lab=VSS}

@@ -16,10 +16,10 @@ module dig(
   always_ff @(posedge clk) begin
       if (rst) begin
          b <= 0;
-         reset <= 0;  // Ensure reset is actively driven
+         reset <= 1;  // Ensure reset is actively driven
       end else begin
          b <= b + 1;
-         reset <= 1;
+         reset <= 0;
       end
   end
 endmodule
