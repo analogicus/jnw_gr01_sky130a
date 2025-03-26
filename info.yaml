@@ -5,7 +5,7 @@ author: Elise, Emmanuel, Håvard and Ragnhild
 # Your github username
 github: analogicus
 # Something funny and descriptive
-tagline: This is a difficult project!
+tagline: Just keep swimming! - Dory
 # Your email, if you so wish
 email: 
 # Your github site, usually <github username>.github.io
@@ -17,7 +17,5 @@ doc:
          - JNW_GR01
          - OTA
          - SKY_OTA
-         - SKYOP
-         - D_FLIP_FLOP_V2
 sim:
   JNW_GR01: make typical
