@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/JNW_GR01_lpe.spi
+.include ../../../work/lpe/temo_effected_current_lpe.spi
 #else
-.include ../../../work/xsch/JNW_GR01.spice
+.include ../../../work/xsch/temo_effected_current.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -17,33 +17,24 @@
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
-.param AVDD = 1.8
-.param PERIOD_CLK = 1u
-.param PW_CLK = PERIOD_CLK/2
+
+.param AVDD = {vdda}
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS  dc 1.8
-*VDD  VDD  0  dc {AVDD}
-VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
-* Verilog Reset Signal Driving a Voltage Source
+VDD  VDD  0 dc 1.8
 
-*Ereset reset 0 Vreset 0 1
-*Vreset vreset 0 PWL(0ns 0V 1ns 1V)
-
-*----------------------------------------------------------------
+*-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
-.include ../svinst.spi
 
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
 .save all
- 
 
 
 *----------------------------------------------------------------
@@ -57,15 +48,9 @@ unset askquit
 
 optran 0 0 0 1n 1u 0
 
+dc temp -60 150 5
 
-*dc temp -60 150 5
-*- Override the default digital output bridge.
-pre_set auto_bridge_d_out =
-     + ( ".model auto_dac dac_bridge(out_low = 0.0 out_high = 1.8)"
-     +   "auto_bridge%d [ %s ] [ %s ] auto_dac" )
-
-
-tran 10n 30u 10p
+*tran 1n 10n 1p
 write
 quit
 
