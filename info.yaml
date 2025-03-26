@@ -15,5 +15,9 @@ doc:
   libraries:
     JNW_GR01_SKY130A:
          - JNW_GR01
+         - OTA
+         - SKY_OTA
+         - SKYOP
+         - D_FLIP_FLOP_V2
 sim:
   JNW_GR01: make typical
