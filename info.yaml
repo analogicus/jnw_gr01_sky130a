@@ -15,9 +15,8 @@ doc:
   libraries:
     JNW_GR01_SKY130A:
          - JNW_GR01
-         - OTA
-         - SKY_OTA
          - SKYOP
          - temo_effected_current
+         - SKY_OTA
 sim:
   JNW_GR01: make typical
