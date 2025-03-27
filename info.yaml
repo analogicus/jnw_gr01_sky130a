@@ -17,5 +17,7 @@ doc:
          - JNW_GR01
          - OTA
          - SKY_OTA
+         - SKYOP
+         - temo_effected_current
 sim:
   JNW_GR01: make typical
