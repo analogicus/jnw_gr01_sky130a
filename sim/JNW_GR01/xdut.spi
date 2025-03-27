@@ -1,6 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut JNW_GR01
-<<<<<<< HEAD
 XDUT VDD OUT VSS  JNW_GR01
-=======
-XDUT reset cmp VDD VSS  JNW_GR01
->>>>>>> haavard
