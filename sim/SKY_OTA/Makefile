@@ -2,16 +2,12 @@
 
 all: typical etc mc summary
 
-netlist: netlist
-	-rm dig.so
-	-rm -rf dig_obj_dir
-	ngspice vlnggen ../../rtl/dig.v
-	perl ../../tech/script/gensvinst ../../rtl/dig.v dig
+
 
 TB=tran
 VIEW=Sch
 #VIEW=Lay
-CELL=JNW_GR01
+CELL=SKY_OTA
 LIB =JNW_GR01_SKY130A
 OPT=
 
