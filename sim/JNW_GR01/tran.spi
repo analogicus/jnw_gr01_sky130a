@@ -29,7 +29,6 @@ VSS  VSS  0     dc 0
 VDD  VDD  0  dc {AVDD}
 VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 * Verilog Reset Signal Driving a Voltage Source
-
 *Ereset reset 0 Vreset 0 1
 *Vreset vreset 0 PWL(0ns 0V 1ns 1V)
 
@@ -42,8 +41,8 @@ VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save all
- 
+*.save all
+.save i(v1)
 
 
 *----------------------------------------------------------------
