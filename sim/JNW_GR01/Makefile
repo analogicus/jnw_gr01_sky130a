@@ -2,7 +2,7 @@
 
 all: typical etc mc summary
 
-netlist: netlist
+netlist: mynetlist
 	-rm dig.so
 	-rm -rf dig_obj_dir
 	ngspice vlnggen ../../rtl/dig.v
@@ -20,28 +20,28 @@ include ../../tech/make/sim.make
 test:
 	${MAKE} typical OPT="Debug"
 
-typical: netlist
+typical: mynetlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
 
-slow: netlist
+slow: mynetlist
 	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl
 
-fast: netlist
+fast: mynetlist
 	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th,Tl" Vh
 
-tfs: netlist
+tfs: mynetlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
-etc: netlist
+etc: mynetlist
 	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 
-mc: netlist
+mc: mynetlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
 
-ntc: netlist
+ntc: mynetlist
 	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
 
-temp: netlist
+temp: mynetlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
 
 summary:

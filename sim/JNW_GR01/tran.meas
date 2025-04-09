@@ -4,7 +4,7 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-let i = i(v1)
-meas tran i find i(v1) at=1n
+*let i = i(v1)
+meas tran i find i(v.xdut.v1) at=1n
 echo "MEAS_END"
 .endc

@@ -6,16 +6,12 @@ S {}
 E {}
 N -200 -250 -200 80 {lab=LEFT_SIDE}
 N 60 120 60 140 {lab=VR}
-N 310 -360 310 -290 {lab=#net1}
-N 310 -260 370 -260 {lab=#net1}
-N 370 -320 370 -260 {lab=#net1}
-N 310 -320 370 -320 {lab=#net1}
+N 310 -360 310 -290 {lab=VDD}
+N 310 -260 370 -260 {lab=VDD}
+N 370 -320 370 -260 {lab=VDD}
+N 310 -320 370 -320 {lab=VDD}
 N 210 -260 270 -260 {lab=GATE}
-N -20 -360 310 -360 {lab=#net1}
 N -60 -280 -60 -230 {lab=GATE}
-N -60 -380 -60 -360 {lab=#net1}
-N -60 -450 -60 -440 {lab=VDD}
-N -200 -450 -60 -450 {lab=VDD}
 N -60 240 -60 310 {lab=VSS}
 N -100 310 -60 310 {lab=VSS}
 N -60 -230 -60 -180 {lab=GATE}
@@ -42,24 +38,26 @@ N 60 10 60 20 {lab=RIGHT_SIDE}
 N -200 80 -200 140 {lab=LEFT_SIDE}
 N 60 -250 60 -140 {lab=RIGHT_SIDE}
 N -160 -280 20 -280 {lab=GATE}
-N 60 -280 80 -280 {lab=#net1}
-N 120 -330 120 -280 {lab=#net1}
-N 60 -330 80 -330 {lab=#net1}
-N 60 -330 60 -310 {lab=#net1}
-N -220 -280 -200 -280 {lab=#net1}
-N -260 -330 -260 -280 {lab=#net1}
-N -220 -330 -200 -330 {lab=#net1}
-N -200 -330 -200 -310 {lab=#net1}
-N -200 -360 -200 -330 {lab=#net1}
-N -200 -360 60 -360 {lab=#net1}
-N 60 -360 60 -330 {lab=#net1}
+N 60 -280 80 -280 {lab=VDD}
+N 120 -330 120 -280 {lab=VDD}
+N 60 -330 80 -330 {lab=VDD}
+N 60 -330 60 -310 {lab=VDD}
+N -220 -280 -200 -280 {lab=VDD}
+N -260 -330 -260 -280 {lab=VDD}
+N -220 -330 -200 -330 {lab=VDD}
+N -200 -330 -200 -310 {lab=VDD}
+N -200 -360 -200 -330 {lab=VDD}
+N 60 -360 60 -330 {lab=VDD}
 N 310 -230 310 -140 {lab=OUT}
 N 310 -140 380 -140 {lab=OUT}
-N -200 310 -100 310 {}
-N 80 -330 120 -330 {}
-N 80 -280 120 -280 {}
-N -260 -330 -220 -330 {}
-N -260 -280 -220 -280 {}
+N -200 310 -100 310 {lab=VSS}
+N 80 -330 120 -330 {lab=VDD}
+N 80 -280 120 -280 {lab=VDD}
+N -260 -330 -220 -330 {lab=VDD}
+N -260 -280 -220 -280 {lab=VDD}
+N -200 -360 310 -360 {lab=VDD}
+N -200 -450 -60 -450 {lab=VDD}
+N -60 -450 -60 -360 {lab=VDD}
 C {devices/ipin.sym} -200 -450 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 20 -280 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -160 -280 0 1 {name=x2 }
@@ -79,11 +77,6 @@ C {devices/lab_wire.sym} 210 -260 0 0 {name=p8 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 380 -140 0 0 {name=p9 lab=OUT}
 C {devices/lab_wire.sym} 60 130 0 1 {name=p10 sig_type=std_logic lab=VR}
 C {devices/lab_wire.sym} -130 -80 2 1 {name=p11 sig_type=std_logic lab=VDD}
-C {devices/res.sym} -60 -410 0 0 {name=R3
-value=0
-footprint=1206
-device=resistor
-m=1}
 C {sky130_fd_pr/pnp_05v5.sym} -220 170 0 0 {name=Q3
 model=pnp_05v5_W3p40L3p40
 m=1
