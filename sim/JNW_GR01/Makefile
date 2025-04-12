@@ -9,8 +9,8 @@ netlist: netlist
 	perl ../../tech/script/gensvinst ../../rtl/dig.v dig
 
 TB=tran
-VIEW=Sch
-#VIEW=Lay
+#VIEW=Sch
+VIEW=Lay
 CELL=JNW_GR01
 LIB =JNW_GR01_SKY130A
 OPT=
