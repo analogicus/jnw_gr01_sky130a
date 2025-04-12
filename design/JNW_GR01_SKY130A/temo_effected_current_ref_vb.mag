@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1744387230
+timestamp 1744453268
 << locali >>
 rect 9153 120 9562 126
 rect 9153 15 9159 120
@@ -180,19 +180,19 @@ rect 4833 3397 8448 3398
 rect 8447 3396 8448 3397
 rect 8686 3396 8687 3636
 rect 8447 3395 8687 3396
-use SKY_OTA__0  xa2 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_GR01_SKY130A
-timestamp 1744384538
+use SKY_OTA  xa3 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_GR01_SKY130A
+timestamp 1744453268
 transform 1 0 0 0 1 0
 box -184 -460 6592 8906
-use JNWATR_PCH_4C5F0__0  xb1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_ATR_SKY130A
+use JNWATR_PCH_4C5F0  xb1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_ATR_SKY130A
 timestamp 1740610800
 transform 1 0 7088 0 1 480
 box -184 -128 1336 928
-use JNWATR_PCH_4C5F0__0  xb2
+use JNWATR_PCH_4C5F0  xb2
 timestamp 1740610800
 transform 1 0 7088 0 1 1280
 box -184 -128 1336 928
-use JNWTR_RPPO2__0  xc1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_TR_SKY130A
+use JNWTR_RPPO2  xc1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_TR_SKY130A
 timestamp 1744368746
 transform 1 0 8920 0 1 0
 box 0 0 1448 3440
@@ -200,31 +200,31 @@ use JNWTR_RPPO16  xc2 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/..
 timestamp 1744368746
 transform 1 0 8920 0 1 3536
 box 0 0 4472 3440
-use JNWATR_PCH_4C5F0__0  xe1
+use JNWATR_PCH_4C5F0  xe1
 timestamp 1740610800
 transform 1 0 0 0 1 9560
 box -184 -128 1336 928
-use JNWATR_PCH_4C5F0__0  xe2
+use JNWATR_PCH_4C5F0  xe2
 timestamp 1740610800
 transform 1 0 0 0 1 10360
 box -184 -128 1336 928
-use JNWATR_PCH_4C5F0__0  xe3
+use JNWATR_PCH_4C5F0  xe3
 timestamp 1740610800
 transform 1 0 0 0 1 11160
 box -184 -128 1336 928
-use JNWATR_PCH_4CTAPBOT__0  XJNWATR_PCH_4CTAPBOT0 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_ATR_SKY130A
+use JNWATR_PCH_4CTAPBOT  XJNWATR_PCH_4CTAPBOT0 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_ATR_SKY130A
 timestamp 1740610800
 transform 1 0 7088 0 1 0
 box -184 -128 1336 608
-use JNWATR_PCH_4CTAPBOT__0  XJNWATR_PCH_4CTAPBOT2
+use JNWATR_PCH_4CTAPBOT  XJNWATR_PCH_4CTAPBOT2
 timestamp 1740610800
 transform 1 0 0 0 1 9080
 box -184 -128 1336 608
-use JNWATR_PCH_4CTAPTOP__0  XJNWATR_PCH_4CTAPTOP1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_ATR_SKY130A
+use JNWATR_PCH_4CTAPTOP  XJNWATR_PCH_4CTAPTOP1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_ATR_SKY130A
 timestamp 1740610800
 transform 1 0 7088 0 1 2080
 box -184 -128 1336 608
-use JNWATR_PCH_4CTAPTOP__0  XJNWATR_PCH_4CTAPTOP3
+use JNWATR_PCH_4CTAPTOP  XJNWATR_PCH_4CTAPTOP3
 timestamp 1740610800
 transform 1 0 0 0 1 11960
 box -184 -128 1336 608

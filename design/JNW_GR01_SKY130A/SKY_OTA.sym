@@ -1,29 +1,26 @@
-v {xschem version=3.4.6 file_version=1.2}
-G {}
+v {xschem version=3.4.6RC file_version=1.2}
 K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
 }
-V {}
-S {}
-E {}
-L 4 -50 -50 80 0 {}
-L 4 -50 50 80 0 {}
-L 4 -50 -50 -50 50 {}
-L 4 0 -50 0 -30 {}
-L 4 -70 -20 -50 -20 {}
-L 4 80 0 100 0 {}
-L 4 -70 20 -50 20 {}
-L 4 0 30 0 50 {}
-B 5 -2.5 -52.5 2.5 -47.5 {name=VDD dir=in}
-B 5 -72.5 -22.5 -67.5 -17.5 {name=V_minus dir=in}
-B 5 97.5 -2.5 102.5 2.5 {name=Diff_Out dir=in}
-B 5 -72.5 17.5 -67.5 22.5 {name=V_pluss dir=in}
-B 5 -2.5 47.5 2.5 52.5 {name=VSS dir=in}
-T {@symname} 40.5 34 0 0 0.3 0.3 {}
-T {@name} 45 18 0 0 0.2 0.2 {}
-T {VDD} 15 -54 1 0 0.2 0.2 {}
-T {V_minus} -45 -24 0 0 0.2 0.2 {}
-T {Diff_Out} 25 -4 0 0 0.2 0.2 {}
-T {V_pluss} -45 16 0 0 0.2 0.2 {}
-T {VSS} 5 56 3 0 0.2 0.2 {}
+T {@symname} -49.5 -6 0 0 0.3 0.3 {}
+T {@name} 135 -52 0 0 0.2 0.2 {}
+L 4 -130 -40 130 -40 {}
+L 4 -130 40 130 40 {}
+L 4 -130 -40 -130 40 {}
+L 4 130 -40 130 40 {}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=VDD dir=in}
+L 4 -150 -30 -130 -30 {}
+T {VDD} -125 -34 0 0 0.2 0.2 {}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=V_minus dir=in}
+L 4 -150 -10 -130 -10 {}
+T {V_minus} -125 -14 0 0 0.2 0.2 {}
+B 5 147.5 -32.5 152.5 -27.5 {name=Diff_Out dir=out}
+L 4 130 -30 150 -30 {}
+T {Diff_Out} 125 -34 0 1 0.2 0.2 {}
+B 5 -152.5 7.5 -147.5 12.5 {name=V_pluss dir=in}
+L 4 -150 10 -130 10 {}
+T {V_pluss} -125 6 0 0 0.2 0.2 {}
+B 5 -152.5 27.5 -147.5 32.5 {name=VSS dir=in}
+L 4 -150 30 -130 30 {}
+T {VSS} -125 26 0 0 0.2 0.2 {}

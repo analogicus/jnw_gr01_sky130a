@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1744388539
+timestamp 1744453268
 << viali >>
 rect 3289 8253 3419 8383
 rect 3290 6904 3358 6972
@@ -435,7 +435,7 @@ use JNWTR_CAPX4  xf ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../J
 timestamp 1744367799
 transform 1 0 -212 0 1 5320
 box 480 0 3120 2640
-use JNWTR_CAPX1__0  xg1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_TR_SKY130A
+use JNWTR_CAPX1  xg1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_TR_SKY130A
 timestamp 1737500400
 transform 1 0 3320 0 1 5320
 box 0 0 1080 1080
@@ -473,15 +473,15 @@ transform 1 0 3320 0 1 8298
 box -184 -128 1336 608
 << labels >>
 flabel metal1 3798 4038 4092 4308 0 FreeSans 800 0 0 0 VDD
-port 2 nsew
+port 2 nsew default input
 flabel metal1 2636 8044 2942 8308 0 FreeSans 800 0 0 0 Diff_Out
-port 4 nsew
+port 4 nsew default output
 flabel metal1 2928 2532 3220 2884 0 FreeSans 800 0 0 0 V_minus
-port 6 nsew
+port 6 nsew default input
 flabel metal1 2142 298 2516 558 0 FreeSans 800 0 0 0 VSS
-port 8 nsew
+port 8 nsew default input
 flabel metal1 4850 350 5098 742 0 FreeSans 800 0 0 0 V_pluss
-port 10 nsew
+port 10 nsew default input
 << properties >>
 string FIXED_BBOX 0 0 6408 8480
 << end >>

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1744390707
+timestamp 1744454117
 << locali >>
 rect 10440 3624 11604 3640
 rect 10552 3528 11604 3624
@@ -194,8 +194,8 @@ rect 4758 3331 9773 3332
 rect 9772 3323 9773 3331
 rect 9984 3323 9985 3552
 rect 9772 3322 9985 3323
-use SKY_OTA  xa2
-timestamp 1744388539
+use SKY_OTA  xa2 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_GR01_SKY130A
+timestamp 1744453268
 transform 1 0 0 0 1 0
 box -184 -460 6592 8906
 use JNWATR_PCH_4C5F0  xb1 ~/pro/aicex/ip/jnw_gr01_sky130a/design/JNW_GR01_SKY130A/../JNW_ATR_SKY130A
@@ -244,13 +244,13 @@ transform 1 0 0 0 1 11960
 box -184 -128 1336 608
 << labels >>
 flabel metal1 6660 6480 7534 6902 0 FreeSans 1600 0 0 0 VDD
-port 1 nsew
+port 1 nsew default input
 flabel metal1 6804 -362 8306 -42 0 FreeSans 1600 0 0 0 VSS
-port 2 nsew
+port 2 nsew default input
 flabel metal1 4128 10534 5270 11202 0 FreeSans 1600 0 0 0 Vref
-port 3 nsew
+port 3 nsew default output
 flabel metal1 1978 11428 2782 11892 0 FreeSans 1600 0 0 0 OUT
-port 4 nsew
+port 4 nsew default output
 << properties >>
 string FIXED_BBOX 0 0 11664 12440
 << end >>
