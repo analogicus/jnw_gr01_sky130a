@@ -19,7 +19,6 @@ module dig(
          reset <= 1;  // Ensure reset is actively driven
       end else begin
          b <= b + 1;
-         reset <= 0;
       end
   end
 endmodule

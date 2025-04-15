@@ -5,7 +5,6 @@ V {}
 S {}
 E {}
 N -200 -250 -200 80 {lab=LEFT_SIDE}
-N 60 120 60 140 {lab=VR}
 N 310 -360 310 -290 {lab=VDD}
 N 310 -260 370 -260 {lab=VDD}
 N 370 -320 370 -260 {lab=VDD}
@@ -33,7 +32,6 @@ N -200 240 60 240 {lab=VSS}
 N 60 220 60 240 {lab=VSS}
 N -200 20 -80 20 {lab=LEFT_SIDE}
 N -40 20 60 20 {lab=RIGHT_SIDE}
-N 60 20 60 60 {lab=RIGHT_SIDE}
 N 60 10 60 20 {lab=RIGHT_SIDE}
 N -200 80 -200 140 {lab=LEFT_SIDE}
 N 60 -250 60 -140 {lab=RIGHT_SIDE}
@@ -58,6 +56,9 @@ N -260 -280 -220 -280 {lab=VDD}
 N -200 -360 310 -360 {lab=VDD}
 N -200 -450 -60 -450 {lab=VDD}
 N -60 -450 -60 -360 {lab=VDD}
+N 60 20 60 40 {lab=RIGHT_SIDE}
+N 60 100 60 140 {lab=VR}
+N 60 120 80 120 {lab=VR}
 C {devices/ipin.sym} -200 -450 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 20 -280 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -160 -280 0 1 {name=x2 }
@@ -68,14 +69,10 @@ C {devices/lab_wire.sym} 60 -140 0 1 {name=p6 sig_type=std_logic lab=RIGHT_SIDE
 }
 C {devices/lab_wire.sym} -200 -120 0 1 {name=p7 sig_type=std_logic lab=LEFT_SIDE
 }
-C {devices/res_ac.sym} 60 90 0 0 {name=R108
-value=10k
-ac=10k
-m=1}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 270 -260 0 0 {name=x4}
 C {devices/lab_wire.sym} 210 -260 0 0 {name=p8 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 380 -140 0 0 {name=p9 lab=OUT}
-C {devices/lab_wire.sym} 60 130 0 1 {name=p10 sig_type=std_logic lab=VR}
+C {devices/lab_wire.sym} 80 120 0 1 {name=p10 sig_type=std_logic lab=VR}
 C {devices/lab_wire.sym} -130 -80 2 1 {name=p11 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pnp_05v5.sym} -220 170 0 0 {name=Q3
 model=pnp_05v5_W3p40L3p40
@@ -88,3 +85,8 @@ m=8
 spiceprefix=X
 }
 C {JNW_GR01_SKY130A/SKY_OTA.sym} -60 -80 3 0 {name=x3}
+C {sky130_fd_pr/res_xhigh_po_1p41.sym} 60 70 0 0 {name=R1
+L=1.41
+model=res_xhigh_po_1p41
+spiceprefix=X
+mult=1}

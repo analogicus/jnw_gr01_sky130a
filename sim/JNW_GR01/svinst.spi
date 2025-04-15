@@ -7,7 +7,7 @@ adut [clk
 + b.2
 + b.1
 + b.0
-+ reset=0
++ reset
 + ] null dut
 .model dut d_cosim simulation="../dig.so" delay=10p
 
