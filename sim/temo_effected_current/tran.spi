@@ -37,7 +37,7 @@ VDD  VDD  0  dc {AVDD}
 * PROBE
 *----------------------------------------------------------------
 *.save all
-.save i(v.xdut.v2)
+.save i(v.xdut.v2) i(v.xdut.v1)
 .save v(xdut.vr) v(VDD) v(VSS) v(xdut.right_side)
 
 *----------------------------------------------------------------
