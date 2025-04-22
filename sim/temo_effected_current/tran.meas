@@ -1,0 +1,10 @@
+* Measure temo_effected_current
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+*meas tran i find i(v.xdut.v1) at=1n
+meas tran v find v(xdut.vr) at=1n
+echo "MEAS_END"
+.endc

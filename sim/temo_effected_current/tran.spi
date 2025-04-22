@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/JNW_GR01_lpe.spi
+.include ../../../work/lpe/temo_effected_current_lpe.spi
 #else
-.include ../../../work/xsch/JNW_GR01.spice
+.include ../../../work/xsch/temo_effected_current.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -16,45 +16,29 @@
 *-----------------------------------------------------------------
 * PARAMETERS
 *-----------------------------------------------------------------
+*.param TRF = 10p
+*.param AVDD = {vdda}
 .param TRF = 10p
 .param AVDD = 1.8
-.param PERIOD_CLK = 20n
-.param PW_CLK = PERIOD_CLK/2
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
+*VSS  VSS  0     dc 0
+*VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 VSS  VSS  0     dc 0
 VDD  VDD  0  dc {AVDD}
-VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
-*VRESET reset 0 dc {AVDD} pwl 0 {AVDD} {PW_CLK*2} {AVDD} {PW_CLK*2 + 1n} 0
-* Verilog Reset Signal Driving a Voltage Source
-*Ereset reset 0 Vreset 0 1
-*Vreset vreset 0 PWL(0ns 0V 1ns 1V)
-
-*----------------------------------------------------------------
+*-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
-.include ../svinst.spi
 
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
 *.save all
-.save i(v.xdut.v1)
-.save v(reset)
-.save v(VCLK)
-.save v(cmp)
-.save v(xdut.net2)
-.save v(xdut.net3)
-
-* Translate names
-VB0 b.0 b<0> dc 0
-VB1 b.1 b<1> dc 0
-VB2 b.2 b<2> dc 0
-VB3 b.3 b<3> dc 0
-VB4 b.4 b<4> dc 0
+.save i(v.xdut.v2)
+.save v(xdut.vr) v(VDD) v(VSS) v(xdut.right_side)
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -65,8 +49,9 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 5n 80u 0
 
+
+optran 0 0 0 5n 80u 0
 
 *dc temp -60 150 5
 *- Override the default digital output bridge.
@@ -75,7 +60,7 @@ pre_set auto_bridge_d_out =
      +   "auto_bridge%d [ %s ] [ %s ] auto_dac" )
 
 
-tran 5n 80u 10p
+tran 1n 10n 1p
 write
 quit
 
