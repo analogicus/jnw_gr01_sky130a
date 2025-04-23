@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut temo_effected_current
-XDUT VDD OUT VSS  temo_effected_current
+XDUT VDD Vref OUT VSS  temo_effected_current

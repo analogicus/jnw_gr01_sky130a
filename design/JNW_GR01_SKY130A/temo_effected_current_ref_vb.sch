@@ -40,10 +40,6 @@ N -40 270 -40 340 {lab=VSS}
 N -80 340 -40 340 {lab=VSS}
 N -130 -80 -110 -80 {lab=VDD}
 N -10 -80 20 -80 {lab=VSS}
-N -80 -10 -80 20 {lab=LEFT_SIDE}
-N -350 20 -80 20 {lab=LEFT_SIDE}
-N -40 -10 -40 20 {lab=RIGHT_SIDE}
-N -40 20 250 20 {lab=RIGHT_SIDE}
 N -350 80 -350 130 {lab=LEFT_SIDE}
 N 250 -250 250 -210 {lab=vref}
 N 250 -210 250 -190 {lab=vref}
@@ -55,7 +51,13 @@ N 190 160 250 160 {lab=VDD}
 N 190 -380 190 160 {lab=VDD}
 N -350 160 190 160 {lab=VDD}
 N -60 -460 -60 -400 {lab=VDD}
-N -60 -280 -60 -180 {lab=GATE}
+N -110 -80 -90 20 {lab=VDD}
+N -30 20 -10 -80 {lab=VSS}
+N -350 20 -70 40 {lab=LEFT_SIDE}
+N -70 30 -70 40 {lab=LEFT_SIDE}
+N -70 20 -70 30 {lab=LEFT_SIDE}
+N -50 40 250 -20 {lab=RIGHT_SIDE}
+N -50 20 -50 40 {}
 C {devices/ipin.sym} -200 -470 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 210 -280 0 0 {name=xe2}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -310 -280 0 1 {name=xe1}
@@ -71,7 +73,7 @@ C {devices/lab_wire.sym} 480 -280 0 0 {name=p8 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 750 -20 0 0 {name=p9 lab=OUT}
 C {devices/lab_wire.sym} 250 120 0 1 {name=p10 sig_type=std_logic lab=VR}
 C {devices/lab_wire.sym} -130 -80 2 1 {name=p11 sig_type=std_logic lab=VDD}
-C {JNW_GR01_SKY130A/SKY_OTA.sym} -60 -80 3 0 {name=xa2}
+C {JNW_GR01_SKY130A/SKY_OTA.sym} -60 -130 3 0 {name=xa2}
 C {devices/opin.sym} 250 -210 0 0 {name=p4 lab=vref
 }
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} 250 30 1 0 {name=xc1}

@@ -28,7 +28,6 @@ N 640 -340 640 -280 {lab=VDD}
 N 580 -340 640 -340 {lab=VDD}
 N 480 -280 540 -280 {lab=GATE}
 N 580 -20 750 -20 {lab=OUT}
-N 580 -250 580 -20 {lab=OUT}
 N 250 -380 580 -380 {lab=VDD}
 N -350 270 250 270 {lab=VSS}
 N -350 -380 -60 -380 {lab=VDD}
@@ -61,7 +60,9 @@ N -160 -80 -80 20 {lab=VDD}
 N -40 50 250 10 {lab=RIGHT_SIDE}
 N -40 20 -40 50 {lab=RIGHT_SIDE}
 N -350 30 -60 40 {lab=LEFT_SIDE}
-N -60 20 -60 40 {}
+N -60 20 -60 40 {lab=LEFT_SIDE}
+N 580 -250 580 -150 {lab=#net1}
+N 580 -90 580 -20 {lab=OUT}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 210 -280 0 0 {name=xe2}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -310 -280 0 1 {name=xe1}
 C {devices/lab_wire.sym} 80 -280 0 1 {name=p5 sig_type=std_logic lab=GATE}
@@ -83,3 +84,8 @@ C {devices/ipin.sym} -90 340 0 0 {name=p2 lab=VSS}
 C {devices/opin.sym} 750 -20 0 0 {name=p3 lab=OUT
 }
 C {JNW_GR01_SKY130A/SKY_OTA.sym} -50 -130 3 0 {name=x1}
+C {devices/res.sym} 580 -120 0 0 {name=R1
+value=1
+footprint=1206
+device=resistor
+m=1}

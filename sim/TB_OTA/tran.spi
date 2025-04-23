@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/TB_OP6_lpe.spi
+.include ../../../work/lpe/TB_OTA_lpe.spi
 #else
-.include ../../../work/xsch/TB_OP6.spice
+.include ../../../work/xsch/TB_OTA.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -35,7 +35,8 @@ VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 * PROBE
 *----------------------------------------------------------------
 .save all
-.save @r.xdut.R1[i]
+
+
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -46,12 +47,11 @@ set color1=black
 unset askquit
 
 optran 0 0 0 1n 1u 0
-dc temp -60 150 5
 
-*tran 1n 10n 1p
+
+tran 1n 10n 1p
 write
 quit
-
 
 .endc
 
