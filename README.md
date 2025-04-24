@@ -41,6 +41,10 @@ The Verilog code is stored in aicex/ip/jnw_gr01_sky130a/rtl/FSM.v. It is then tr
 ### Issues
 We simulated one rise of the comparator, and it works, but the system does not reset because the state machine does not give the reset signal. The Verilog code looks good, so it is more the connection of the files together. This is something we need to fix ASAP.
 
+### Layout
+The final layout is seen below:
+![Analog Circuit Layout](digital_magic.png)
+
 
 
 # What
