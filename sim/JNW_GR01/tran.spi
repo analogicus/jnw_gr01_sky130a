@@ -25,8 +25,8 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-*VDD  VDD  VSS  dc 1.8
-VDD  VDD  0  dc {AVDD}
+VDD  VDD  VSS  dc 1.8
+*VDD  VDD  0  dc {AVDD}
 VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 * Verilog Reset Signal Driving a Voltage Source
 
