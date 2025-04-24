@@ -50,14 +50,15 @@ N 310 -360 310 -310 {lab=VDD}
 N 310 -280 350 -280 {lab=VDD}
 N 350 -360 350 -280 {lab=VDD}
 N 310 -360 350 -360 {lab=VDD}
-N 310 -250 310 -140 {lab=OUT}
+N 310 -250 310 -140 {lab=#net4}
 N 310 -80 400 -80 {lab=OUT}
+N -60 170 40 170 {lab=VSS}
+N -60 170 -60 340 {lab=VSS}
 C {devices/ipin.sym} -200 -450 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 20 -280 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -160 -280 0 1 {name=x2 }
 C {devices/ipin.sym} -200 410 0 0 {name=p2 lab=VSS}
 C {devices/lab_wire.sym} 20 -80 2 0 {name=p3 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} -40 -280 0 1 {name=p5 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 400 -80 0 0 {name=p9 lab=OUT}
 C {devices/lab_wire.sym} 80 220 0 1 {name=p10 sig_type=std_logic lab=VR}
 C {devices/lab_wire.sym} -130 -80 2 1 {name=p11 sig_type=std_logic lab=VDD}

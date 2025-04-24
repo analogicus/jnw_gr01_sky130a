@@ -47,7 +47,7 @@ N 70 200 100 200 {lab=VSS}
 N 70 200 70 270 {lab=VSS}
 C {devices/capa.sym} -20 200 0 0 {name=C2
 m=1
-value=40.6p
+value=40p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/res.sym} -20 -10 0 0 {name=R1
@@ -69,4 +69,4 @@ C {JNW_GR01_SKY130A/SKYOP.sym} 260 30 0 0 {name=x2}
 C {devices/lab_wire.sym} -20 50 0 1 {name=p7 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} -80 150 3 0 {name=V1 value=0 savecurrent=true}
-C {/home/aehavmo/aicex/ip/jnw_bias_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 140 200 2 0 {name=x3 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 140 200 0 1 {name=x3 }

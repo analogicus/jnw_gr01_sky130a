@@ -5,10 +5,22 @@
 #include "Vlng__pch.h"
 #include "Vlng___024root.h"
 
+VL_ATTR_COLD void Vlng___024root___eval_static__TOP(Vlng___024root* vlSelf);
+
 VL_ATTR_COLD void Vlng___024root___eval_static(Vlng___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_static\n"); );
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    Vlng___024root___eval_static__TOP(vlSelf);
+}
+
+VL_ATTR_COLD void Vlng___024root___eval_static__TOP(Vlng___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_static__TOP\n"); );
+    Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    vlSelfRef.dig__DOT__x = 0U;
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_initial(Vlng___024root* vlSelf) {
@@ -68,8 +80,9 @@ VL_ATTR_COLD void Vlng___024root___ctor_var_reset(Vlng___024root* vlSelf) {
     // Body
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->cmp = VL_RAND_RESET_I(1);
-    vlSelf->b = VL_RAND_RESET_I(5);
+    vlSelf->b = VL_RAND_RESET_I(8);
     vlSelf->reset = VL_RAND_RESET_I(1);
-    vlSelf->dig__DOT__rst = VL_RAND_RESET_I(1);
+    vlSelf->dig__DOT__x = VL_RAND_RESET_I(1);
+    vlSelf->dig__DOT__a = VL_RAND_RESET_I(8);
     vlSelf->__Vtrigprevexpr___TOP__clk__0 = VL_RAND_RESET_I(1);
 }

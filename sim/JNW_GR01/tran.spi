@@ -46,6 +46,7 @@ VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 .save v(reset)
 .save v(VCLK)
 .save v(cmp)
+.save v(xdut.net1)
 .save v(xdut.net2)
 .save v(xdut.net3)
 
